@@ -81,7 +81,7 @@ function NavBar(props) {
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
               <Link
                 className={"nav-link" + activeItem["createAccount"]}
-                href="/createaccount"
+                to ="/createaccount"
                 title="Create Account"
                 data-toggle="tooltip"
               >
