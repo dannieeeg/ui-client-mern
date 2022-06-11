@@ -1,8 +1,8 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const PORT = process.env.PORT || 3000;
-const API_URL = "http://localhost:" + PORT + "/api/user/";
+const PORT = process.env.PORT || 8080;
+const API_URL = "https://daniel-gutierrezfullstackbankingapplication.azurewebsites.net:" + PORT + "/api/user/";
 
 class UserService {
   getUserBalance(userID) {
