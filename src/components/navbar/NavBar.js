@@ -47,7 +47,7 @@ function NavBar(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="p-3">
         <img src="mylogo.png" alt="MyBank" width="65px" />
-        <Link className="navbar-brand brand-text" href="#/" title="Home Page">
+        <Link className="navbar-brand brand-text" to ="#/" title="Home Page">
           BANK SAFELY WITH DANIEL GUTIERREZ 
         </Link>
       </div>
@@ -68,14 +68,14 @@ function NavBar(props) {
       >
         <ul className="navbar-nav">
           <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-            <a
+            <Link
               className={"nav-link" + activeItem["home"]}
-              href="/"
+              to ="/"
               title="Home"
               data-toggle="tooltip"
             >
               Home
-            </a>
+            </Link>
           </li>
           {!currentUser && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
@@ -91,14 +91,14 @@ function NavBar(props) {
           )}
           {!currentUser && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-              <a
+              <Link
                 className={"nav-link" + activeItem["login"]}
-                href="/login"
+                to ="/login"
                 title="Login"
                 data-toggle="tooltip"
               >
                 Login
-              </a>
+              </Link>
             </li>
           )}
 
@@ -114,52 +114,52 @@ function NavBar(props) {
           )}
           {currentUser && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-              <a
+              <Link
                 className={"nav-link" + activeItem["deposit"]}
-                href="/deposit"
+                to ="/deposit"
                 title="Deposit"
                 data-toggle="tooltip"
               >
                 Deposit
-              </a>
+              </Link>
             </li>
           )}
           {currentUser && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-              <a
+              <Link
                 className={"nav-link" + activeItem["withdraw"]}
-                href="/withdraw"
+                to ="/withdraw"
                 title="Withdraw"
                 data-toggle="tooltip"
               >
                 Withdraw
-              </a>
+              </Link>
             </li>
           )}
 
           {currentUser && showAdmin && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-              <a
+              <Link
                 className={"nav-link" + activeItem["allData"]}
-                href="/alldata"
+                to="/alldata"
                 title="All Data"
                 data-toggle="tooltip"
               >
                 All Data
-              </a>
+              </Link>
             </li>
           )}
 
           {currentUser && (
             <li className="nav-item px-4" onClick={props.logOut}>
-              <a
+              <Link
                 className={"nav-link"}
-                href="/login"
+                to ="/login"
                 title="logout"
                 data-toggle="tooltip"
               >
                 Logout
-              </a>
+              </Link>
             </li>
           )}
         </ul>
