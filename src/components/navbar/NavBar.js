@@ -47,9 +47,9 @@ function NavBar(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="p-3">
         <img src="mylogo.png" alt="MyBank" width="65px" />
-        <a className="navbar-brand brand-text" href="#/" title="Home Page">
+        <Link className="navbar-brand brand-text" href="#/" title="Home Page">
           BANK SAFELY WITH DANIEL GUTIERREZ 
-        </a>
+        </Link>
       </div>
       <button
         className="navbar-toggler"
@@ -79,14 +79,14 @@ function NavBar(props) {
           </li>
           {!currentUser && (
             <li className="nav-item px-4" onClick={(e) => handleClick(e)}>
-              <a
+              <Link
                 className={"nav-link" + activeItem["createAccount"]}
                 href="/createaccount"
                 title="Create Account"
                 data-toggle="tooltip"
               >
                 Create Account
-              </a>
+              </Link>
             </li>
           )}
           {!currentUser && (
