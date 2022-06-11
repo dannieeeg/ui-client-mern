@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const PORT = process.env.PORT || 8080;
-const API_URL = "https://daniel-gutierrezfullstackbankingapplication.azurewebsites.net:" + PORT + "/api/auth/";
+
+const API_URL = "https://daniel-gutierrezfullstackbankingapplication.azurewebsites.net/api/auth/";
 const DEFAULT_BALANCE = 0;
 const DEFAULT_ROLE = ["USER"];
 
