@@ -63,7 +63,7 @@ const Welcome = () => {
         }
       );
     }
-  }, []);
+  }, [currentUser]);
 
   useEffect(() => {
     if (currentUser) {
@@ -87,7 +87,7 @@ const Welcome = () => {
         }
       );
     }
-  }, []);
+  }, [currentUser]);
 
   function buildRows() {
     let tempRows = [];

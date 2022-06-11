@@ -60,7 +60,7 @@ function AllData() {
         }
       );
     }
-  }, []);
+  }, [currentUser]);
 
   function buildRows() {
     let tempRows = [];
