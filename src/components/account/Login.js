@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, useNavigate } from "react-router-dom";
 import Card from "../Card";
 import AccountForm from "./AccountForm";
 
 import { login } from "../../actions/auth";
 
 function Login(props) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState("");
@@ -38,8 +39,8 @@ function Login(props) {
 
     dispatch(login(email, password))
       .then(() => {
-        props.history.push("/welcome");
-        window.location.reload();
+        navigate("/welcome");
+        
       })
       .catch(() => {
         setStatus(`Error:  There was an error trying to login. `);
